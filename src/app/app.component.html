@@ -1,95 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1,
-  maximum-scale=5"
-    />
 
-    <link rel="icon" href="devchallenges.png" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1,
+  maximum-scale=5" />
+  <link rel="icon" href="devchallenges.png" />
+  <link rel="shortcut icon" type="image/x-icon" href="https://devchallenges.io/" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet" />
+  <title>{{ title }}</title>
+</head>
 
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="https://devchallenges.io/"
-    />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-
-    <title>Devchallenges</title>
-
-    <style>
-      body {
-        font-family: "Poppins", sans-serif;
-      }
-
-      ul {
-        padding-left: 24px;
-      }
-
-      li {
-        margin-bottom: 8px;
-      }
-
-      .welcome {
-        max-width: 800px;
-        margin: 0 auto;
-      }
-
-      .welcome-text {
-        margin-top: 30vh;
-        font-weight: 500;
-      }
-
-      .welcome-text p {
-        font-size: 1rem;
-        font-weight: 400;
-      }
-
-      .welcome-text h1 {
-        font-size: 1.5rem;
-      }
-
-      .welcome-text a {
-        color: #f7542e;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="welcome">
-      <div class="welcome-text">
-        <h1>
-          Welcome to
-          <a href="https://devchallenges.io/" target="_blank"
-            >devchallenges.io</a
-          >
-        </h1>
-
-        <p>
-          If you have any questions, don't hesitate to ask on Discord. Here are
-          7 general steps to complete the challenge:
-        </p>
-      </div>
-
-      <ul>
-        <li><b>Step 1:</b> Create a new repository on github</li>
-        <li><b>Step 2:</b> Copy resources, README.md to your repository</li>
-        <li>
-          <b>Step 3:</b> Login to Figma to checkout font, color, spacing,..
-        </li>
-        <li><b>Step 4:</b> Complete all user stories</li>
-        <li><b>Step 5:</b> Update README.md</li>
-        <li><b>Step 6:</b> Deploy your app and submit your solution</li>
-        <li>
-          <b>Step 7:</b> Share your solution on Discord, Twitter and other
-          platforms to ask for feedback
-        </li>
-      </ul>
+<body>
+  <h2>Buttons</h2>
+  <div class="btn-section btn-section--normal">
+    <div>
+      <p>&lt;Button /&gt;</p>
+      <app-button variant="default"></app-button>
     </div>
-  </body>
+    <div>
+      <p>&:hover, &:focus</p>
+      <app-button variant="default-active"></app-button>
+    </div>
+  </div>
+  <div class="btn-section btn-section--outline">
+    <div>
+      <p>&lt;Button variant="outline" /&gt;</p>
+      <app-button variant="outline"></app-button>
+    </div>
+    <div>
+      <p>&:hover, &:focus</p>
+      <app-button variant="outline-active"></app-button>
+    </div>
+  </div>
+  <div class="btn-section btn-section--text">
+    <div>
+      <p>&lt;Button variant="text" /&gt;</p>
+      <app-button variant="text"></app-button>
+    </div>
+    <div>
+      <p>&:hover, &:focus</p>
+      <app-button variant="text-active"></app-button>
+    </div>
+  </div>
+  <div class="btn-section btn-section--disable-shadow">
+    <div>
+      <p>&lt;Button variant="disableShadow" /&gt;</p>
+      <app-button variant="disableShadow" color="default"></app-button>
+    </div>
+  </div>
+  <div class="btn-section btn-section--disable">
+    <div>
+      <p>&lt;Button disabled /&gt;</p>
+      <app-button isDisabled="true"></app-button>
+    </div>
+    <div>
+      <p>&lt;Button variant="text" disabled /&gt;</p>
+      <app-button variant="text" isDisabled="true"></app-button>
+    </div>
+  </div>
+  <div class="btn-section btn-section--with-icon">
+    <div>
+      <p>&lt;Button startIcon=”local_grocery_store” /&gt;</p>
+      <app-button color="primary" startIcon="local_grocery_store"></app-button>
+    </div>
+    <div>
+      <p>&lt;Button endIcon=”local_grocery_store” /&gt;</p>
+      <app-button color="primary" endIcon="local_grocery_store"></app-button>
+    </div>
+  </div>
+  <div class="btn-section btn-section--sizes">
+    <div>
+      <p>&lt;Button size="sm" /&gt;</p>
+      <app-button size="sm" color="primary"></app-button>
+    </div>
+    <div>
+      <p>&lt;Button size="md" /&gt;</p>
+      <app-button size="md" color="primary"></app-button>
+    </div>
+    <div>
+      <p>&lt;Button size="lg" /&gt;</p>
+      <app-button size="lg" color="primary"></app-button>
+    </div>
+  </div>
+  <div class="btn-section btn-section--colors">
+    <div>
+      <p>&lt;Button color="default" /&gt;</p>
+      <app-button color="default"></app-button>
+    </div>
+    <div>
+      <p>&lt;Button color="primary" /&gt;</p>
+      <app-button color="primary"></app-button>
+    </div>
+    <div>
+      <p>&lt;Button color="secondary" /&gt;</p>
+      <app-button color="secondary"></app-button>
+    </div>
+    <div>
+      <p>&lt;Button color="danger" /&gt;</p>
+      <app-button color="danger"></app-button>
+    </div>
+  </div>
+  <div class="btn-section btn-section--colors-active">
+    <div>
+      <p>&:hover, &:focus</p>
+      <app-button color="default-active"></app-button>
+    </div>
+    <div>
+      <p>&:hover, &:focus</p>
+      <app-button color="primary-active"></app-button>
+    </div>
+    <div>
+      <p>&:hover, &:focus</p>
+      <app-button color="secondary-active"></app-button>
+    </div>
+    <div>
+      <p>&:hover, &:focus</p>
+      <app-button color="danger-active"></app-button>
+    </div>
+  </div>
+
+
+
+</body>
+
 </html>
